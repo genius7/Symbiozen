@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Symbiozen | Agricultural Robotics</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#0b0f14;
+    --card:#111722;
+    --accent:#00c896;
+    --text:#e8eef6;
+    --muted:#8b98a9;
+}
+
+/* ---------- RESET ---------- */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter',sans-serif;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    scroll-behavior:smooth;
+}
+
+/* ---------- HEADER ---------- */
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:26px 10%;
+    position:sticky;
+    top:0;
+
+    background:rgba(11,15,20,0.85);
+    backdrop-filter: blur(14px);
+
+    border-bottom:1px solid #141b26;
+    z-index:1000;
+}
+
+/* BIGGER + blended logo */
+.logo{
+    height:70px;
+    width:auto;
+    object-fit:contain;
+    filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));
+    transition:0.25s;
+}
+
+.logo:hover{
+    transform:scale(1.03);
+}
+
+nav a{
+    color:var(--muted);
+    margin-left:28px;
+    text-decoration:none;
+    font-weight:500;
+    transition:.2s;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+
+    background:
+      radial-gradient(circle at 20% 20%, #0e1c24, transparent 40%),
+      radial-gradient(circle at 80% 80%, #062a23, transparent 40%);
+}
+
+.hero h1{
+    font-size:64px;
+    font-weight:700;
+    max-width:900px;
+}
+
+.hero p{
+    margin-top:24px;
+    font-size:20px;
+    color:var(--muted);
+    max-width:650px;
+}
+
+/* ---------- BUTTON ---------- */
+
+.btn{
+    margin-top:40px;
+    padding:14px 36px;
+    border-radius:40px;
+    background:var(--accent);
+    color:#000;
+    font-weight:600;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* ---------- SECTIONS ---------- */
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    font-size:40px;
+    margin-bottom:60px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:var(--card);
+    padding:35px;
+    border-radius:18px;
+    transition:.25s;
+}
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+/* ---------- METRICS ---------- */
+
+.metrics{
+    display:flex;
+    justify-content:space-around;
+    flex-wrap:wrap;
+    text-align:center;
+    gap:40px;
+}
+
+.metric h2{
+    font-size:44px;
+    color:var(--accent);
+}
+
+/* ---------- FOOTER ---------- */
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:var(--muted);
+    border-top:1px solid #1b2430;
+}
+</style>
+</head>
+
+
+<body>
+
+<header>
+    <img src="symbiozen-logo.png" class="logo" alt="Symbiozen Logo">
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#solutions">Solutions</a>
+        <a href="#tech">Technology</a>
+        <a href="investor.html">Investors</a>
+		<a href="#contact">Contact</a>
+    </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Autonomous Robotics for Smarter Oil Palm Plantations</h1>
+    <p>
+        Precision agriculture meets robotics. Symbiozen transforms plantations
+        through AI-driven automation and intelligent field systems.
+    </p>
+    <a href="investor.html" class="btn">Investor Pitch →</a>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+    <h2 class="section-title">About Symbiozen</h2>
+    <p style="max-width:800px;color:var(--muted)">
+        Symbiozen develops intelligent robotic systems engineered specifically
+        for oil palm plantations — harvesting, inspection and analytics.
+        We combine AI, robotics and sustainability to increase yield while reducing
+        operational costs.
+    </p>
+</section>
+
+
+<!-- SOLUTIONS -->
+<section id="solutions">
+    <h2 class="section-title">Solutions</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Harvest Automation</h3>
+            <p>Robotic cutters for consistent and safe fruit bunch harvesting.</p>
+        </div>
+
+        <div class="card">
+            <h3>Autonomous Rovers</h3>
+            <p>Field robots for crop monitoring and real-time mapping.</p>
+        </div>
+
+        <div class="card">
+            <h3>AI Analytics</h3>
+            <p>Yield forecasting and plantation optimization dashboards.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- METRICS -->
+<section>
+    <div class="metrics">
+        <div class="metric"><h2>40%</h2><p>Labor Reduction</p></div>
+        <div class="metric"><h2>25%</h2><p>Yield Increase</p></div>
+        <div class="metric"><h2>24/7</h2><p>Autonomous Ops</p></div>
+    </div>
+</section>
+
+
+<footer>
+© 2026 Symbiozen • Balance & Innovation
+</footer>
+
+</body>
+</html>
